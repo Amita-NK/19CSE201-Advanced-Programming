@@ -1,0 +1,43 @@
+#include <iostream>
+using namespace std;
+class vehicle{
+private:
+    int bill;
+    int sold;
+public:
+    int modelno;
+    float cost;
+    int seater;
+    
+ void getdetails(int m,int s ,float c){
+     modelno=m;
+     cost=s;
+     seater=c;
+ }
+ void printdetails(){
+    cout<<modelno<<endl;
+    cout<<cost<<endl;
+    cout<<seater<<endl; 
+ }
+ void printmessage(){
+     cout<<"Byee.Thank you for using our service"<<endl;
+ }
+};
+
+int main() {
+    vehicle c;
+    int modelno;
+    float cost;
+    int seater;
+    
+    cout<<"Enter the modelno: ";
+    cin>>modelno;
+    cout<<"Enter the cost: ";
+    cin>>cost;
+    cout<<"seater: ";
+    cin>>seater;
+    c.getdetails(modelno,cost,seater);
+    c.printdetails();
+    c.printmessage();
+    return 0;
+}
