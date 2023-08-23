@@ -1,0 +1,61 @@
+#include<iostream>
+using namespace std;
+class BankAccount{
+string name;
+int acno;
+double balance;
+public:
+
+//void accountdetails(string n,int a,int b){
+    //name=n;
+    //acno=a;
+    //balance=b;
+    
+//}
+void deposit(double d){
+   
+    balance=balance+d;
+    cout<<"Deposited ₹"<<d<<" into the account."<<endl;
+}
+void withdraw(double w){
+    if(w>balance){
+        cout<<"Insufficient balance or invalid withdrawal amount."<<endl;
+    }
+    else{
+    balance=balance-w;
+  cout<<"Withdrawn ₹"<<w<<" from the account."<<endl;
+    }
+    
+}
+void display(){
+cout<<"Account Holder: "<<name<<endl;
+cout<<"Account Number: "<<acno<<endl;
+cout<<"Current Balance: ₹"<<balance<<endl;
+    
+}
+BankAccount(string n,int a,int b){
+    name=n;
+    acno=a;
+    balance=b;
+    cout<<"Bank Account created Successfully"<<endl;
+}
+};
+int main(){
+    
+string name;
+int acno;
+double balance;
+double deposit;
+double withdraw1,withdraw2;
+cin>>name>>acno>>balance;
+BankAccount c(name,acno,balance);
+
+//c.BankAccount("Amita",2345678,123457.98765);
+c.display();
+cin>>deposit;
+c.deposit(deposit);
+cin>>withdraw1>>withdraw2;
+c.withdraw(withdraw1);
+c.withdraw(withdraw2);
+c.display();
+}
