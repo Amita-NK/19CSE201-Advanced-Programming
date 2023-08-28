@@ -1,0 +1,47 @@
+#include<iostream>
+
+using namespace std;
+class BankAccount{
+    public:
+    int Accountno;
+    float balance;
+    string acctype;
+    BankAccount(int acno)
+    {
+      Accountno=acno;
+      balance=500;
+      acctype="SB";
+      cout<<"Your Savings bank account is created"<<endl;
+    }
+    BankAccount(int acno,float bal)
+    {
+      Accountno=acno;
+      balance=bal;
+      acctype="SB";
+      cout<<"Your Savings bank account with "<<bal<< " is created."<<endl;
+    }
+   BankAccount(int acno,float bal,string act)
+    {
+      Accountno=acno;
+      balance=bal;
+      acctype=act;
+      cout<<"Your Account is created."<<endl;
+    }
+    void Display(){
+cout<<Accountno<<endl<<balance<<endl<<acctype<<endl;
+}
+};
+int main(){
+   int Accountno;
+    float balance;
+    string acctype;
+    cout<<"Welcome to the bank."<<endl;
+    //BankAccount b,c,d;
+    BankAccount b(2389754);
+    b.Display();
+    BankAccount c(23800645,5000.8);
+    c.Display();
+    BankAccount d(35879607,780.50,"FD");
+    d.Display();
+    cout<<"Thank You for using our services."<<endl; 
+}
