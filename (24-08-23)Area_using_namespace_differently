@@ -1,0 +1,31 @@
+#include<iostream>
+using namespace std;
+//using namespace rectangle;
+
+int length;
+int breadth;
+int radius;
+namespace rectangle{
+    void area(int l,int b){
+        int area;
+        length=l;
+        breadth=b;
+        area=l*b;
+        cout<<"Area of the rectangle is "<<area<<"cm^2."<<endl;
+    }
+}
+    namespace circle{
+    void area(int r){
+        int area;
+        radius=r;
+        area=r*r;
+        cout<<"Area of the circle is "<<area<<"cm^2."<<endl;
+    }}
+    using namespace rectangle;
+    int main(){
+        ///using namespace rectangle;
+        area(2,3);
+        //rectangle::area(2,3);
+        //circle::area(4);
+        return 0;
+    }
