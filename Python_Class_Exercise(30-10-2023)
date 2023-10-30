@@ -1,0 +1,37 @@
+myneighbours=[66,67,68]
+myneighbours.append(69)
+myneighbours.insert(0,65)
+print(myneighbours)
+[65, 66, 67, 68, 69]
+myneighbours.remove(65)
+print(myneighbours)
+[66, 67, 68, 69]
+myneighbours.pop()
+69
+print(myneighbours)
+[66, 67, 68]
+myneighbours.pop(0)
+66
+print(myneighbours)
+[67, 68]
+myneighbours.insert(0,67)
+print(myneighbours)
+[67, 67, 68]
+myneighbours.count(67)
+2
+myneighbours.sort()
+print(myneighbours)
+[67, 67, 68]
+myneighbours.sort(reverse=True)
+print(myneighbours)
+[68, 67, 67]
+neighbours=myneighbours.copy()
+print(neighbours)
+[68, 67, 67]
+print(myneighbours)
+[68, 67, 67]
+myneighbours.clear()
+print(myneighbours)
+[]
+del myneighbours
+print(myneighbours)
